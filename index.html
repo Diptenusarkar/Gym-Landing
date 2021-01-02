@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            color: #fff;
+            top: 0;
+            left: 0;
+            background-image: url(img/1.jpg);
+        }
+
+        /* 
+        left 
+        ***********************************
+         */
+
+        .left {
+            display: inline-block;
+            /* border: 2px solid red; */
+            top: 25px;
+            left: 40px;
+            position: absolute;
+        }
+
+        .left img {
+            width: 50px;
+        }
+
+        /* *******************************************************  */
+        .mid {
+            /* border: 2px solid yellow; */
+            display: block;
+            margin: 50px auto;
+            width: 42%;
+        }
+
+        .mid ol {
+            list-style: none;
+            /* margin-top: 20px; */
+        }
+
+        .mid ol li {
+            display: inline-block;
+
+        }
+
+        .mid ol li a {
+            text-decoration: none;
+            color: #Fff;
+            padding: 10px 20px;
+            font-size: 20px;
+        }
+
+        .active {
+            background: rgba(255, 0, 0, 0.753);
+            border-radius: 5px;
+            transition: all .5s;
+        }
+
+        .active:hover {
+            background: red;
+            /* translate: all .1s; */
+        }
+
+        .nab-link-a {
+            transition: all .5s;
+        }
+
+        .nab-link-a:hover:not(.active) {
+            background: green;
+            border-radius: 5px;
+        }
+
+        /* .nab-link-a:hover:not(.active):active {
+            background-color: grey;
+        } */
+
+        /* ****************************************************** */
+        .right {
+            /* border: 2px solid green; */
+            display: inline-block;
+            position: absolute;
+            top: 52px;
+            right: 40px;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            padding: 10px 15px;
+            background-color: grey;
+            border-radius: 8px;
+            transition: all .5s;
+        }
+
+        .btn:hover {
+            background-color: rgb(0, 133, 138);
+            border-radius: 0px;
+        }
+
+        /* ******************************************  */
+        .main-contact-form {
+            border: 1px solid red;
+            height: 400px;
+            width: 350px;
+            position: absolute;
+            bottom: 100px;
+            right: 80px;
+            border-radius: 5px;
+        }
+
+        .main-contact-form>h3 {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        label {
+            display: block;
+            text-align: center;
+        }
+
+        .style-input {
+            display: block;
+            width: 70%;
+            margin: 10px auto;
+            padding: 10px 30px;
+            border-radius: 2px;
+        }
+
+        .style-input:focus {
+            outline: none;
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 35%;
+            margin: 30px auto;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="https://diptenu.me/img/profile.png" alt="">
+            <div>Diptenu </div>
+        </div>
+        <div class="mid">
+            <ol>
+                <li> <a href="#" class="active nab-link-a">Home </a></li>
+                <li> <a href="#" class="nab-link-a">About </a></li>
+                <li> <a href="#" class="nab-link-a">Fit Calculater </a></li>
+                <li> <a href="#" class="nab-link-a">Somthing </a></li>
+            </ol>
+        </div>
+        <div class="right">
+            <a href="#" class="btn">Contact</a>
+            <a href="#" class="btn">E-main</a>
+        </div>
+        <div class="main-contact-form">
+            <h3>Book Your free Day</h3>
+            <form action="noaction.php" method="post">
+
+                <label for="fname">First Name:
+                    <input class="style-input" type="text" id="fname" name="fname" placeholder="Enter your first name" required>
+                </label>
+
+                <label for="mobilen">Mobile Number:
+                    <input class="style-input" type="tel" id="mobilen" placeholder="Your contact number" required>
+                </label>
+
+                <label for="area">Choose area
+                    <input class="style-input" id="area" name="Location" list="areia-location" placeholder="Choose your area" required>
+                    <datalist id="areia-location">
+                        <option value="Gazna">
+                        <option value="Kolkata">
+                        <option value="Delhi">
+                        <option value="Puna">
+                        <option value="Panjab">
+                        <option value="Odisha">
+                        <option value="Hyderabad">
+                        <option value="J & K">
+                    </datalist>
+                </label>
+
+                <input type="submit" value="Book Now">
+
+            </form>
+        </div>
+    </header>
+</body>
+
+</html>
